@@ -30,6 +30,7 @@ ski_data = [sales_price, original_price]
 ski_df = pd.DataFrame( columns = ['sales_price', 'original_price'] )
 ski_df.loc[datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")] = ski_data
 
+## test
 
 #ski_df.loc[datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")] = ski_data
 
