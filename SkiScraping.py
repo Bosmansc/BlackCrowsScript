@@ -42,7 +42,7 @@ else: # else it exists so append without writing the header
    ski_df.to_csv(filename, mode='a', header=False, quoting = csv.QUOTE_NONE, sep='\t')
 
 ## read from csv to check if the sales price has changed
-full_ski_df = pd.read_csv("ski_sales_price.csv", sep='\t')
+full_ski_df = pd.read_csv("ski_sales_price.csv", sep='\t', error_bad_lines=False)
 
 
 ## send an email if the sales price has fallen
@@ -62,7 +62,7 @@ context = ssl.create_default_context()
 
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
     server.login("blackcrowsscript@gmail.com", password)
-    if full_ski_df.iloc[-2,1] == full_ski_df.iloc[-1,1]:
+    if full_ski_df.iloc[-2,1] > full_ski_df.iloc[-1,1]:
     	server.sendmail(sender_email, receiver_email, message)
     	print("de prijs is gedaald!")
 
