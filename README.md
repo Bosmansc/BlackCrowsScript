@@ -1,6 +1,8 @@
 # BlackCrowsScript
 Automated Python script to track the sales price of a set of skis.
 
+## Windows Task Scheduler Settings
+
 Use windows scheduler to daily run the python script.
 
 1) go to administrative tools
@@ -10,10 +12,6 @@ Use windows scheduler to daily run the python script.
 
 -> an email will be sent if the sales price has fallen
 
-
-## Error-handling
-
-1) python-script does not run from task scheduler
 
 Use the following settings to "Start a program" in the task scheduler:
 
