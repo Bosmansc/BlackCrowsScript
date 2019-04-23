@@ -11,7 +11,7 @@ Use windows scheduler to daily run the python script.
 -> an email will be sent if the sales price has fallen
 
 
-# Error-handling:
+## Error-handling
 
 1) python-script does not run from task scheduler
 
