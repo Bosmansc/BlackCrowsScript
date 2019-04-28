@@ -61,10 +61,7 @@ password = "Blackcrowsscript1"
 context = ssl.create_default_context()
 
 with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
-    server.login("blackcrowsscript@gmail.com", password)
+    server.login(sender_email, password)
     if full_ski_df.iloc[-2,1] > full_ski_df.iloc[-1,1]:
     	server.sendmail(sender_email, receiver_email, message)
     	print("de prijs is gedaald!")
-
-
-
