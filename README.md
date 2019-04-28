@@ -19,3 +19,4 @@ Use the following settings to "Start a program" in the task scheduler:
 
 -  Start in: Location of script.py, something like C:\path\to\script
 
+- see the included image to run the python-script in the background
